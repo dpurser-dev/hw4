@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tacostagram Final</title>
+    <title>Journal</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,13 @@
   <body>
     <div>
       <%= flash["notice"] %>
+      <% if @current_user %>
+        <p>Logged in as: <%= @current_user["first_name"] %></p>
+        <a href="/logout">Logout</a>
+      <% else %>
+        <a href="/login">Login</a> |
+        <a href="/users/new">Sign Up</a>
+      <% end if %>
     </div>
     <div>
       <a href="/">Home</a>
