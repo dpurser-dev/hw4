@@ -18,4 +18,8 @@ class UsersController < ApplicationController
     redirect_to "/"
   end
 
+  def show
+
+  end
+
 end

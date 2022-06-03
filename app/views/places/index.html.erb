@@ -12,13 +12,13 @@
         <% for place in @places %>
           <div class="col">
             <div class="p-3 border bg-light">
-              <a class="place-link" href="/places/<%= place["id"] %>"><img width="100px" src="025-journal-black.png"><%= place["name"] %></a>
+              <a href="/places/<%= place["id"] %>"><img class="place-img" width="100px" src="025-journal-black.png"></a><a class="place-link" href="/places/<%= place["id"] %>"><%= place["name"] %></a>
             </div>
           </div>
         <% end %>
         <div class="col">
           <div class="p-3 border bg-light">
-            <a class="place-link" href="/places/new"><img width="100px" src="015-add-black.png">New place</a>
+            <a href="/places/new"><img class="place-img" width="100px" src="009-book-black.png"></a><a class="place-link" href="/places/new">New place</a>
           </div>
         </div> 
     <% else %>

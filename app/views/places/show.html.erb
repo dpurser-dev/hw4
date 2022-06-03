@@ -1,4 +1,3 @@
-
 <div class="container">
 
   <div class="row gy-5">
@@ -14,6 +13,11 @@
       <% for post in @posts %>
         <div class="col">
           <div class="p-3 border bg-light">
+            <% if post.uploaded_image.attached? %>
+              <img width="100px" src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
+            <% else %>
+              <img width="100px" src="../018-text book-black.png">
+            <% end %>
             <h3><%= post["title"] %></h3>
             <h4><%= post["posted_on"] %></h4>
             <p><%= post["description"] %></p>
@@ -25,7 +29,7 @@
     <div class="col">
       <div class="p-3 border bg-light">
         <a href="/posts/new?place_id=<%= @place["id"] %>">
-          <img src="../015-add-black.png">
+          <img width="100px" src="../015-add-black.png">
           New Post
         </a>
       </div>

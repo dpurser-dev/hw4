@@ -10,15 +10,14 @@ input {
     margin-top: 1em;
 }
 
-div.places a {
+a.place-link {
     display: block;
     text-align: center;
 }
 
-div.places a img {
+img.place-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 120px;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
