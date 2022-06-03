@@ -1,16 +1,43 @@
-<h1><%= @place["name"] %></h1>
 
-<h2>My Posts</h2>
-<% for post in @posts %>
-  <h3><%= post["title"] %></h3>
-  <h4><%= post["posted_on"] %></h4>
-  <p><%= post["description"] %></p>
-<% end %>
+<div class="container">
 
-<p>
-  <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
-</p>
+  <div class="row gy-5">
+    <div class="col-6">
+      <h1><%= @place["name"] %></h1>
+      <h2>My Posts</h2>
+    </div>
+  </div>
+  
+  <div class="places">
+  <div class="row gy-5">
+    <% if @posts%>
+      <% for post in @posts %>
+        <div class="col">
+          <div class="p-3 border bg-light">
+            <h3><%= post["title"] %></h3>
+            <h4><%= post["posted_on"] %></h4>
+            <p><%= post["description"] %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
 
-<p>
-  <a href="/places">Back to All Places</a>
-</p>
+    <div class="col">
+      <div class="p-3 border bg-light">
+        <a href="/posts/new?place_id=<%= @place["id"] %>">
+          <img src="../015-add-black.png">
+          New Post
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="row gy-5">
+    <div class="col">
+      <a href="/places">Back to All Places</a>
+    </div>
+  </div>
+
+
+</div>
