@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: hw4-entr451_production
+  username: hw4-entr451
+  password: <%= ENV["MY_APP_DATABASE_PASSWORD"] %>
