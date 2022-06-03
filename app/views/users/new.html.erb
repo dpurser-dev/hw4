@@ -9,19 +9,17 @@
   <div class="row">
     <div class="col"> 
       <%= form_with :model => @user do |form| %>
-        <p>
-          <%= form.label "username" %>
-          <%= form.text_field "username" %>
-          <%= form.label "first_name" %>
-          <%= form.text_field "first_name" %>
-          <%= form.label "last_name" %>
-          <%= form.text_field "last_name" %>
-          <%= form.label "email" %>
-          <%= form.text_field "email" %>
-          <%= form.label "password" %>
-          <%= form.password_field "password" %>
-          <%= form.submit "Sign up" %>
-        </p>
+          <%= form.label "username", class: "form-label" %>
+          <%= form.text_field "username", class: "form-control" %>
+          <%= form.label "first_name", class: "form-label" %>
+          <%= form.text_field "first_name", class: "form-control" %>
+          <%= form.label "last_name", class: "form-label" %>
+          <%= form.text_field "last_name", class: "form-control" %>
+          <%= form.label "email", class: "form-label" %>
+          <%= form.text_field "email", class: "form-control" %>
+          <%= form.label "password", class: "form-label" %>
+          <%= form.password_field "password", class: "form-control" %>
+          <%= form.submit "Sign up", :class => "btn btn-primary"  %>
       <% end %>
     </div>
   </div>
