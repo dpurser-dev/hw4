@@ -1,15 +1,41 @@
-<h1>Places</h1>
+<div class="container px-4">
 
-<ul>
-  <% if @places %>
-    <% for place in @places %>
-      <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
-    <% end %>
-  <% else %>
-    <li>Not logged in</li>
-  <% end %>
-</ul>
+  <div class="row">
+    <div class="col">
+      <h1>Places</h1>
+    </div>
+  </div>
 
-<p>
-  <a href="/places/new">New place</a>
-</p>
+  <div class="row">
+    <div class="col">
+      <ul>
+        <% if @places %>
+          <% for place in @places %>
+            <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+          <% end %>
+        <% else %>
+          <li>Not logged in</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="p-3 border bg-light"><p><a href="/places/new">New place</a></p></div>
+    </div>
+  </div>
+
+</div>
