@@ -10,19 +10,19 @@
   <div class="row gy-5">
     <% if @places %>   
         <% for place in @places %>
-          <div class="col">
+          <div class="col-md-4">
             <div class="p-3 border bg-light">
-              <a href="/places/<%= place["id"] %>"><img class="place-img" width="100px" src="025-journal-black.png"></a><a class="place-link" href="/places/<%= place["id"] %>"><%= place["name"] %></a>
+              <a href="/places/<%= place["id"] %>"><img class="place-img" width="100px" src="025-journal-black.png"></a><a class="place-link" href="/places/<%= place["id"] %>"><h3><%= place["name"] %></h3></a>
             </div>
           </div>
         <% end %>
-        <div class="col">
+        <div class="col-md-4">
           <div class="p-3 border bg-light">
-            <a href="/places/new"><img class="place-img" width="100px" src="009-book-black.png"></a><a class="place-link" href="/places/new">New place</a>
+            <a href="/places/new"><img class="place-img" width="100px" src="009-book-black.png"></a><a class="place-link" href="/places/new"><h3>New place</h3></a>
           </div>
         </div> 
     <% else %>
-      <div class="col">
+      <div class="col-md-4">
         <div class="p-3 border bg-light">
           Please <a href="/login">login</a> or <a href="/users/new">sign up</a>
         </div>

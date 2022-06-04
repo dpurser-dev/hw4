@@ -11,7 +11,7 @@
   <div class="row gy-5">
     <% if @posts%>
       <% for post in @posts %>
-        <div class="col-md-1">
+        <div class="col-md-4">
           <div class="p-3 border bg-light">
             <% if post.uploaded_image.attached? %>
               <img width="100px" src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
@@ -19,18 +19,20 @@
               <img width="100px" src="../018-text book-black.png">
             <% end %>
             <h3><%= post["title"] %></h3>
-            <h4><%= post["posted_on"] %></h4>
+            <p><%= post["posted_on"] %></p>
             <p><%= post["description"] %></p>
           </div>
         </div>
       <% end %>
     <% end %>
 
-    <div class="col-md-1">
+    <div class="col-md-4">
       <div class="p-3 border bg-light">
         <a href="/posts/new?place_id=<%= @place["id"] %>">
-          <img width="100px" src="../015-add-black.png">
-          New Post 2
+          <img class="place-img" width="100px" src="../015-add-black.png">
+        </a>
+        <a class="place-link" href="/posts/new?place_id=<%= @place["id"] %>">
+          <h3>New Post</h3>
         </a>
       </div>
     </div>
@@ -42,6 +44,5 @@
       <a href="/places">Back to All Places</a>
     </div>
   </div>
-
 
 </div>
