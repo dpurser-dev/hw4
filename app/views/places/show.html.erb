@@ -11,7 +11,7 @@
   <div class="row gy-5">
     <% if @posts%>
       <% for post in @posts %>
-        <div class="col">
+        <div class="col-md-1">
           <div class="p-3 border bg-light">
             <% if post.uploaded_image.attached? %>
               <img width="100px" src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
@@ -26,11 +26,11 @@
       <% end %>
     <% end %>
 
-    <div class="col">
+    <div class="col-md-1">
       <div class="p-3 border bg-light">
         <a href="/posts/new?place_id=<%= @place["id"] %>">
           <img width="100px" src="../015-add-black.png">
-          New Post
+          New Post 2
         </a>
       </div>
     </div>
