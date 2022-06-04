@@ -19,7 +19,12 @@ class UsersController < ApplicationController
   end
 
   def show
+    if @current_user
 
+    else
+      flash["notice"] = "Login first."
+      redirect_to "/"
+    end
   end
 
 end

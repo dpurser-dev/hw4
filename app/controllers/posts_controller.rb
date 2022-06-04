@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
 
   def new
-    @post = Post.new
-    @place = Place.find_by({ "id" => params["place_id"] })
-    @post["place_id"] = @place["id"]
+    if @current_user
+      @post = Post.new
+      @place = Place.find_by({ "id" => params["place_id"] })
+      @post["place_id"] = @place["id"]
+    else
+      flash["notice"] = "Login first."
+      redirect_to "/"
+    end
   end
 
   def create
