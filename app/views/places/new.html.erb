@@ -1,18 +1,32 @@
-<div class="container px-4">
+<div class="container">
 
   <div class="row">
     <div class="col">
-      <h1>New Place</h1>
+      <div class="p-3 bg-white">
+        <h1>New Place</h1>
+      </div>  
     </div>
   </div>
-  <img width="100px" src="../009-book-black.png">
+
+  <div class="row">
+    <div class="col">
+      <div class="p-3 bg-white">
+        <img width="100px" src="../009-book-black.png">
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col"> 
-      <%= form_with :model => @place do |form| %>
-          <%= form.label "name", class: "form-label" %>
-          <%= form.text_field "name", class: "form-control" %>
-          <%= form.submit "Create", :class => "btn btn-primary"  %>
-      <% end %>
+      <div class="p-3 bg-white">
+        <%= form_with :model => @place do |form| %>
+            <p>
+            <%= form.label "name", class: "form-label" %>
+            <%= form.text_field "name", class: "form-control" %>
+            <%= form.submit "Create", :class => "btn btn-primary"  %>
+            </p>
+        <% end %>
+      </div>
     </div>
   </div>
 

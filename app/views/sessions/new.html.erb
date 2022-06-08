@@ -2,21 +2,25 @@
 
   <div class="row">
     <div class="col">
-      <h1>Login</h1>
+      <div class="p-3 bg-white">
+        <h1>Login</h1>
+      </div>
     </div>
   </div>
 
   <div class="row">
     <div class="col"> 
-      <%= form_with :url => "/sessions" do |form| %>
-        <p>
-          <%= form.label "email", class: "form-label"  %>
-          <%= form.text_field "email", class: "form-control"  %>
-          <%= form.label "password", class: "form-label"  %>
-          <%= form.password_field "password", class: "form-control" %>
-          <%= form.submit "Login", :class => "btn btn-primary"  %>
-        </p>
-      <% end %>
+      <div class="p-3 bg-white">
+        <%= form_with :url => "/sessions" do |form| %>
+          <p>
+            <%= form.label "email", class: "form-label"  %>
+            <%= form.text_field "email", class: "form-control"  %>
+            <%= form.label "password", class: "form-label"  %>
+            <%= form.password_field "password", class: "form-control" %>
+            <%= form.submit "Login", :class => "btn btn-primary"  %>
+          </p>
+        <% end %>
+      </div>
     </div>
   </div>
 
