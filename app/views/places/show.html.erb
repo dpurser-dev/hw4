@@ -16,9 +16,9 @@
           <div class="col-md-4">
             <div class="p-3 border bg-light">
               <% if post.uploaded_image.attached? %>
-                <img width="100px" src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
+                <img width="200px" src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
               <% else %>
-                <img width="100px" src="../018-text book-black.png">
+                <img width="200px" src="../018-text book-black.png">
               <% end %>
               <h3><%= post["title"] %></h3>
               <p><%= post["posted_on"] %></p>
