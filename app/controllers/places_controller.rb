@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
     if @current_user
       @place = Place.new
     else
-      flash["notice"] = "Login first."
+      flash["notice"] = "Please login first"
       redirect_to "/"
     end
   end
@@ -27,7 +27,7 @@ class PlacesController < ApplicationController
       @place["user_id"] = @current_user["id"]
       @place.save
     else
-      flash["notice"] = "Login first."
+      flash["notice"] = "Please login first"
     end
     redirect_to "/"
   end

@@ -6,7 +6,7 @@ class PostsController < ApplicationController
       @place = Place.find_by({ "id" => params["place_id"] })
       @post["place_id"] = @place["id"]
     else
-      flash["notice"] = "Login first."
+      flash["notice"] = "Please login first"
       redirect_to "/"
     end
   end
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
       @post.save
       redirect_to "/places/#{@post["place_id"]}"
     else
-      flash["notice"] = "Login first."
+      flash["notice"] = "Please login first"
       redirect_to "/"
     end
   end

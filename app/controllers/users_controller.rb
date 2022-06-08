@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if @current_user
 
     else
-      flash["notice"] = "Login first."
+      flash["notice"] = "Please login first"
       redirect_to "/"
     end
   end

@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         redirect_to "/login"
       end
     else
-      flash["notice"] = "User not found"
+      flash["notice"] = "Account not found"
       redirect_to "/login"
     end
 
